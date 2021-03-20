@@ -11,6 +11,7 @@ const timeout = function (s) {
 
 export const AJAX = async function (url, uploadData = undefined) {
   try {
+    // If there's data to be sent, we use the POST method, otherwise we do a regular fetch
     const fetchPro = uploadData
       ? fetch(url, {
           method: 'POST',
